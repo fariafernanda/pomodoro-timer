@@ -12,16 +12,21 @@
 <body onload="setTimer()">
     <h1>Timer Pomodoro</h1>
 
-    <main id="timer">
-        <div class="container" id="minutes"></div>
-        <p>:</p>
-        <div class="container" id="seconds"></div>
+
+    <main id="timer-container">
+        <section id="timer">
+            <div class="container" id="minutes"></div>
+            <p>:</p>
+            <div class="container" id="seconds"></div>
+        </section>
+        
+        <section id="buttons">
+            <button id="start-btn" onclick="startTimer()">Iniciar</button>
+           
+        </section>
     </main>
 
-    <section id="buttons">
-        <button id="start-btn" onclick="startTimer()">Iniciar</button>
-       
-    </section>
+   
 
     <script src="script.js"></script>
 </body>
