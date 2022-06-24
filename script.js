@@ -49,7 +49,7 @@ function startTimer() {
                 clearInterval(minutesInterval);
                 clearInterval(secondsInterval);
 
-                // audio
+                pauseSound.play();
                startBreakInterval();
 
             }
@@ -61,15 +61,16 @@ function startTimer() {
 }
 
 
-let breakMinutes = 5;
+let breakMinutes = 1;
 let breakSeconds = 0;
 
 // Tempo de descanso
 function startBreakInterval() {    
 
     changeTemplateToPause();
-    
+
     breakMinutes = breakMinutes - 1;
+    
     breakSeconds = 59;
 
     if (breakMinutes < 10) {
@@ -107,7 +108,7 @@ function startBreakInterval() {
                 clearInterval(minutesInterval);
                 clearInterval(secondsInterval);
 
-                // audio
+                startSound.play();
                 startTimer();
 
             }
@@ -130,3 +131,7 @@ function changeTemplateToPause(){
     pause.style.setProperty('display', 'block');
     action.style.setProperty('display', 'none');
 }
+
+// Audios
+var startSound = new Audio("audios/audio_bell.mp3")
+var pauseSound = new Audio("audios/audio_start.mp3")
