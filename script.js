@@ -1,4 +1,4 @@
-let minutes = 25;
+let minutes = 1;
 let seconds = 0;
 
 function setTimer() {
@@ -31,6 +31,7 @@ function startTimer() {
             document.getElementById('minutes').innerHTML = minutes;
         }
 
+       
     };
 
     function secondsCountdown() {
@@ -55,6 +56,8 @@ function startTimer() {
             seconds = 60;
         }
     };
+
+    changeTemplateToAction();
 }
 
 
@@ -64,6 +67,8 @@ let breakSeconds = 0;
 // Tempo de descanso
 function startBreakInterval() {    
 
+    changeTemplateToPause();
+    
     breakMinutes = breakMinutes - 1;
     breakSeconds = 59;
 
@@ -110,4 +115,18 @@ function startBreakInterval() {
         }
     };
 
+}
+
+let action = document.getElementById('action');
+let pause = document.getElementById('pause');
+let startButton = document.getElementById('start-btn');
+
+function changeTemplateToAction(){
+    startButton.style.setProperty('display', 'none');
+
+}
+
+function changeTemplateToPause(){
+    pause.style.setProperty('display', 'block');
+    action.style.setProperty('display', 'none');
 }

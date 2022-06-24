@@ -1,10 +1,10 @@
 :root {
-    --paleviolet: rgba(216,112,147,0.9);
+    --paleviolet: rgb(216,112,147);
     --blue-medium: #68A7AD;
     --light-blue: #99C4C8;
     --beige: rgba(229, 203, 159, 0.8);
     --beige-light: #EEE4AB;
-    --coral: rgba(255, 93, 93,0.9);
+   
 }
 
 * {
@@ -18,12 +18,29 @@ body {
     font-family: sans-serif;
 }
 
+.navbar {
+    background-color: var(--light-blue);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
 h1 {
-    color: var(--coral);
+    color: whitesmoke;
     text-shadow: 1px 1px 2px rgb(0 0 0 / 55%);
+    font-size: 40px;
+    
+    
+}
+
+header {
+    height: 70px;
     text-align: center;
-    font-size: 55px;
-    margin: 20px;
+    font-size: 22px;
+    color: var(--paleviolet);
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 65%);
+    margin-top: 40px;
+    text-transform: uppercase;
 }
 
 #timer-container {
@@ -51,7 +68,7 @@ h1 {
 }
 
 button {
-    margin: 30px;
+    margin: 15px;
     color: rgba(0,0,0,0.9);
     padding: 12px;
     border-radius: 6px;
